@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Coffee Shop</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- bootstrap links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- bootstrap links -->
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <!-- this is icons link -->
+</head>
+<body>
+    <div class="all-content">
+        <!-- navbar start -->
+
+
+        <nav class="navbar navbar-expand-lg" id="navbar">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#" id="logo"><img src="./images/logo.png" alt=""></a>
+              
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link"href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="menuindex.html">Menu</a>
+                  </li>
+                  
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact us.html">Contact</a>
+                  </li> 
+                  
+                </ul>
+                <li class="icons">
+                  <div class="fas fa-search" id="search-btn"></div>
+                  <div class="fas fa-user" id="login-btn"></div>
+                  <div class="fas fa-shopping-cart" id="cart-btn"></div>
+                  </li>
+                  <form action="" class="cart-form">
+                      <div class="container content-section">
+                          <h2 class="section-header">CART</h2>
+                          <div class="cart-row">
+                              <span class="cart-item cart-header cart-column">ITEM</span>
+                              <span class="cart-price cart-header cart-column">PRICE</span>
+                              <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+                          </div>
+                          <div class="cart-items">
+                          </div>
+                          <div class="cart-total">
+                              <h6><b>DELIVERY CHARGES FOR EACH ITEM : $5</b></h6>
+                              <strong class="cart-total-title">Total</strong>
+                              <span class="cart-total-price">$0</span>
+                          </div>
+                          <button class="btn btn-primary btn-purchase" type="button"><a class="b1" href="checkout.html">PLACE ORDER</a></button>
+                      </div>
+                  </form>
+                <form action="" class="search-form">
+                  <input type="search" id="search-box" placeholder="search here...">
+                  <label for="search-box" class="fas fa-search"></label>
+              </form>
+              <form action="" class="login-form" onsubmit="myFunctionnn()">
+                <h3>login now</h3>
+                <input type="email" placeholder="your email" class="box" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"required>
+                <input type="password" placeholder="your password" class="box">
+                <p>Forget your password <a href="#">click here</a></p>
+                <p>Don't have an account <a href="#">create now</a></p>
+                <input type="submit" value="Login Now" id="btn">
+            </form>
+              </div>
+            </div>
+          </nav>
+
+        <!-- navbar end -->
+<!-- about section start -->
+
+<section id="about">
+    <div class="container">
+        <div class="heading">About Us</div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <img src="./images/about-img.jpeg" alt="">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h3>What Makes Our Coffee Special?</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium sapiente delectus voluptatum est ipsa, vero quibusdam quos veniam sequi quae Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, est?
+                    <br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad iusto voluptatum eligendi nisi consectetur suscipit modi ab, incidunt totam adipisci.
+                    <br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad iusto voluptatum eligendi nisi consectetur suscipit modi ab, incidunt totam adipisci.
+                </p>
+                <button id="about-btn">Learn More.</button>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- about section end -->
+        <!-- footer start -->
+        <footer id="footer">
+            <div class="footer-logo text-center"><img src="./images/logo.png" alt=""></div>
+            <div class="socail-links text-center">
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-facebook-f"></i>
+              <i class="fa-brands fa-instagram"></i>
+              <i class="fa-brands fa-youtube"></i>
+              <i class="fa-brands fa-pinterest-p"></i>
+            </div>
+            <div class="credits text-center">
+              <p><b>Privacy notice &nbsp;&nbsp;| &nbsp;&nbsp; Terms of Use &nbsp;&nbsp;| &nbsp;&nbsp; Do Not Share my personal Information&nbsp;&nbsp;| &nbsp;&nbsp; Cookie Preferences</b></p>
+              Dseigned By <a href="#"> <span>Tech Turtle</span></a>
+            </div>
+            <div class="copyright text-center">
+              &copy; Copyright <strong> <span>Coffee Shop</span></strong>. All Rights reserved
+            </div>
+          </footer>
+          <!-- footer end -->
+          <a href="#" class="arrow"><i><img src="./images/up-arrow.png" alt="" width="50px"></i></a>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+      <!-- custom js file link  -->
+      <script src="script.js"></script>
+  </body>
+  </html>

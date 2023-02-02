@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee shop</title>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<link rel="stylesheet" href="style.css">
+    <!-- bootstrap links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- bootstrap links -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <!-- this is icons link -->
+    <style>
+  
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background-color: black;
+        }
+        .wrapper{
+            width: 1200px;
+            margin: 100px auto;
+            color: white;
+        }
+        .title{
+            text-align: center;
+            margin-bottom: 60px;
+            border-bottom:5px solid rgb(215, 214, 214);
+        }
+        .title h4{
+            text-transform: capitalize;
+            font-size:36px;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+        .title h4 span{
+            display:block;
+            font-size: 18px;
+            font-style: italic;
+            margin-bottom: -10px;
+        }
+        .title h4::before{
+            position:absolute;
+            content:"";
+            width:100px;
+            height:2px;
+            bottom:0;
+            left:50%;
+            transform: translate(-50%);
+            padding-bottom: 5px;
+        }
+        .menu{
+            display: flex;
+            flex-wrap:wrap;
+            justify-content: space-between;
+            color: white;
+            border-bottom:5px solid rgb(215, 214, 214);
+        }
+        .single-menu{
+            flex-basis:580px;
+            padding-bottom: 40px;
+            margin-bottom: 40px;
+        }
+        .single-menu:nth-child(5), .single-menu:nth-child(6){
+            border-bottom: 0;
+        }
+        .single-menu{
+            display: flex;
+            padding:5%;
+            flex-direction: row;
+            align-items: center;
+        }
+        .single-menu img{
+            height: 250px;
+            width: 300px;
+            max-width:180px;
+            margin-right:30px;
+            border-radius: 50%;
+            border:5px solid white;
+            padding: 3px;
+            transition: .5s;
+        }
+        .single-menu h4{
+            text-transform: capitalize;
+            font-size:20px;
+            font-weight: bold;
+            border-bottom: 2px dashed rgb(255, 255, 255);
+            padding-bottom: 5px;
+            margin-bottom: 5px;
+        }
+        .single-menu h4 span{
+            float:right;
+            font-size: large;
+            color: rgb(203, 158, 158);
+            font-style: normal;
+
+        }
+        .single-menu:hover img{
+            border-radius: 0;
+            transform:scale(1.2);
+        }
+        .button{
+            display: flex;
+            height: 50px;
+            width: 100px;
+            align-items: center;
+            padding: 1;
+            background-color: white;
+            color: rgb(0, 0, 0);
+            font-family: Arial, Helvetica, sans-serif;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            overflow: hidden;
+            font-size: 15px;
+            font-weight: 500;
+            font-style: italic;
+            cursor: pointer;
+            margin-left: 20px;
+        }
+        .button:hover{
+            background: rgb(163, 148, 148);
+        }
+        .buttontext{
+            text-decoration: double;
+            text-align: center;
+            margin-left: 6px;
+        }
+    
+    </style>
+        <script>
+            function setNewimage(){
+            document.getElementById("img1").src="img/capuccino.webp";
+        }
+        function setOldimage(){
+            document.getElementById("img1").src="img/cof.webp";
+        }
+        function setNewimage1(){
+            document.getElementById("img2").src="img/decafcap.jpeg";
+        }
+        function setOldimage1(){
+            document.getElementById("img2").src="img/cof2.webp";
+        }
+        function setNewimage2(){
+            document.getElementById("img3").src="img/vanlatte.webp";
+        }
+        function setOldimage2(){
+            document.getElementById("img3").src="img/cof7.jpeg";
+        }
+        function setNewimage3(){
+            document.getElementById("img4").src="img/cof8.webp";
+        }
+        function setOldimage3(){
+            document.getElementById("img4").src="img/icedamericano.jpeg";
+        }
+        function setNewimage4(){
+            document.getElementById("img5").src="img/cof5.webp";
+        }
+        function setOldimage4(){
+            document.getElementById("img5").src="img/coldcap.webp";
+        }
+        function setNewimage5(){
+            document.getElementById("img6").src="img/icedtea.webp";
+        }
+        function setOldimage5(){
+            document.getElementById("img6").src="img/cof9.webp";
+        }
+        function setNewimage6(){
+            document.getElementById("img7").src="img/cof3.jpeg";
+        }
+        function setOldimage6(){
+            document.getElementById("img7").src="img/espresso.jpeg";
+        }
+        function setNewimage7(){
+            document.getElementById("img8").src="img/frap.webp";
+        }
+        function setOldimage7(){
+            document.getElementById("img8").src="img/frapp.jpeg";
+        }
+        function setNewimage8(){
+            document.getElementById("img9").src="img/chai.jpeg";
+        }
+        function setOldimage8(){
+            document.getElementById("img9").src="img/chai1.jpeg";
+        }
+        function setNewimage9(){
+            document.getElementById("img10").src="img/mat.webp";
+        }
+        function setOldimage9(){
+            document.getElementById("img10").src="img/matcha.jpeg";
+        }
+        </script>
+</head>
+<body>
+      <!-- navbar start -->
+      <nav class="navbar navbar-expand-lg" id="navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#" id="logo"><img src="./images/logo.png" alt=""></a>
+         
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="menuindex.html">Menu</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link" href="contact us.html">Contact</a>
+              </li> 
+              
+            </ul>
+            <li class="icons">
+                <div class="fas fa-search" id="search-btn"></div>
+                <div class="fas fa-user" id="login-btn"></div>
+                <div class="fas fa-shopping-cart" id="cart-btn"></div>
+                </li>
+                <form action="" class="cart-form">
+                    <div class="container content-section">
+                        <h2 class="section-header">CART</h2>
+                        <div class="cart-row">
+                            <span class="cart-item cart-header cart-column">ITEM</span>
+                            <span class="cart-price cart-header cart-column">PRICE</span>
+                            <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+                        </div>
+                        <div class="cart-items">
+                        </div>
+                        <div class="cart-total">
+                            <h6><b>DELIVERY CHARGES FOR EACH ITEM : $5</b></h6>
+                            <strong class="cart-total-title">Total</strong>
+                            <span class="cart-total-price">$0</span>
+                        </div>
+                        <button class="btn btn-primary btn-purchase" type="button"><a class="b1" href="checkout.html">PLACE ORDER</a></button>
+                    </div>
+                </form>
+              <form action="" class="search-form">
+                <input type="search" id="search-box" placeholder="search here...">
+                <label for="search-box" class="fas fa-search"></label>
+            </form>
+            <form action="" class="login-form" onsubmit="myFunctionnn()">
+              <h3>login now</h3>
+              <input type="email" placeholder="your email" class="box" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"required>
+              <input type="password" placeholder="your password" class="box">
+              <p>Forget your password <a href="#">click here</a></p>
+              <p>Don't have an account <a href="#">create now</a></p>
+              <input type="submit" value="Login Now" id="btn">
+          </form>
+          </div>
+        </div>
+      </nav>
+
+    <!-- navbar end -->
+<div class="wrapper">
+    <div class="title">
+        <h4><span><ion-icon name="cafe-outline"></ion-icon> Freshly brewed for YOU!</span><br>Our Menu</h4>
+    </div>
+    <div class="menu">
+        <div class="single-menu">
+            <img id="img1" onmouseover="setNewimage()" onmouseout="setOldimage()" src="img/cof.webp" alt="coffee" class="shop-item-image">
+            <div class="menu-content">
+                <h4 class="shop-item-title">CAPPUCCINNO<span class="shop-item-price">$15</span></h4>
+                <p>A one-to-one combination of fresh-brewed coffee and steamed milk add up to one distinctly delicious coffee drink remarkably mixed.</p>
+                <br><button type="button" class="button">
+                <span class="buttontext">Add item +</span>
+                <span class="buttonicon"><ion-icon name="cart"></ion-icon></span>
+            </button>
+            </div>
+        </div>
+        <div class="single-menu">
+            <img id="img2" onmouseover="setNewimage1()" onmouseout="setOldimage1()" src="img/cof2.webp" alt="coffe" class="shop-item-image">
+            <div class="menu-content">
+                <h4 class="shop-item-title">De-caffinated CAPPUCCINO<span class="shop-item-price">$19</span></h4>
+                <p>Dark, rich decafed cap lies in wait under a smoothed and stretched layer of thick milk foam. An alchemy of barista artistry and craft</p>
+                <br><button type="button" class="button">
+                    <span class="buttontext">Add item +</span>
+                    <span class="buttonicon"><ion-icon name="cart"></ion-icon></span>
+                </button>
+            </div>
+        </div>
+            <div class="single-menu">
+                <img onmouseover="setNewimage2()" onmouseout="setOldimage2()" id="img3" src="img/cof7.jpeg" alt="coffe" class="shop-item-image">
+                <div class="menu-content">
+                    <h4 class="shop-item-title">WHIPPED VANILLA LATTE<span class="shop-item-price">$25</span></h4>
+                    <p>Our signature espresso, milk, ice and rich caramel brulée sauce finished with whipped cream and a supreme topping of even more caramel brulée bits.</p>
+                    <br><button type="button" class="button">
+                        <span class="buttontext">Add item +</span>
+                        <span class="buttonicon"><ion-icon name="cart"></ion-icon></span>
+                    </button>
+                </div>
+            </div>
+                <div class="single-menu">
+                    <img id="img4" onmouseover="setNewimage3()" onmouseout="setOldimage3()" src="img/icedamericano.jpeg" alt="coffe" class="shop-item-image">
+                    <div class="menu-content">
+                        <h4 class="shop-item-title">AMERICANO<span class="shop-item-price">$14</span></h4>
+                        <p>Our small-batch cold brew—slow-steeped for a super-smooth taste gets even better. We're infusing it with nitrogen to create a sweet flavor without sugar and cascading, velvety crema. Perfection is served</p>
+                        <br><button type="button" class="button">
+                            <span class="buttontext">Add item +</span>
+                            <span class="buttonicon"><ion-icon name="cart"></ion-icon></span>
+                        </button>
+                    </div>
+                </div>
+                    <div class="single-menu">
+                        <img id="img5" onmouseover="setNewimage4()" onmouseout="setOldimage4()"  src="img/coldcap.webp" alt="coffe" class="shop-item-image">
+                        <div class="menu-content">
+                            <h4 class="shop-item-title">COLD CAPPUCCINO<span class="shop-item-price">$9</span></h4>
+                            <p>Cold Brew is made from our custom blend of beans grown to steep long and cold for a super-smooth flavor.</p>
+                            <br><button type="button" class="button">
+                                <span class="buttontext">Add item +</span>
+                                <span class="buttonicon"><ion-icon name="cart"></ion-icon></span>
+                            </button>
+                        </div>
+                    </div>
+                        <div class="single-menu">
+                            <img onmouseover="setNewimage5()" onmouseout="setOldimage5()" id="img6" src="img/cof9.webp" alt="coffe" class="shop-item-image">
+                            <div class="menu-content">
+                                <h4 class="shop-item-title">ICED-tea (flavoured)<span class="shop-item-price">$9</span></h4>
+                                <p>Awaken your taste buds with the zing of refreshing iced tea this tangy, fresh sip puts a little zip in your step.</p>
+                                <br><button type="button" class="button">
+                                    <span class="buttontext">Add item +</span>
+                                    <span class="buttonicon"><ion-icon name="cart"></ion-icon></span>
+                                </button>
+                            </div>
+                        </div>
+                            <div class="single-menu">
+                                <img id="img7" onmouseover="setNewimage6()" onmouseout="setOldimage6()" src="img/espresso.jpeg" alt="coffe" class="shop-item-image">
+                                <div class="menu-content">
+                                    <h4 class="shop-item-title">FRESH ESPRESSO<span class="shop-item-price">$6</span></h4>
+                                    <p>Espresso shots topped with hot water create a light layer of crema culminating in this wonderfully rich cup with depth and nuance.</p>
+                                    <br><button type="button" class="button">
+                                        <span class="buttontext">Add item +</span>
+                                        <span class="buttonicoid="n"><ion-icon name="cart"></ion-icon></span>
+                                    </button>
+                                </div>
+                            </div>
+                                <div class="single-menu">
+                                    <img id="img8" onmouseover="setNewimage7()" onmouseout="setOldimage7()" src="img/frapp.jpeg" alt="coffe" class="shop-item-image">
+                                    <div class="menu-content">
+                                        <h4 class="shop-item-title">FRAPPUCCINO<span class="shop-item-price">$25</span></h4>
+                                        <p>We take Frappuccino roast coffee and vanilla bean powder, combine them with milk and ice, topped with whipped cream. Tastes like happiness.</p>
+                                        <br><button type="button" class="button">
+                                            <span class="buttontext">Add item +</span>
+                                            <span class="buttonicon"><ion-icon name="cart"></ion-icon></span>
+                                        </button>
+                                    </div>
+                                </div>
+                                    <div class="single-menu">
+                                        <img id="img9" onmouseover="setNewimage8()" onmouseout="setOldimage8()" src="img/chai1.jpeg" alt="coffe" class="shop-item-image">
+                                        <div class="menu-content">
+                                            <h4 class="shop-item-title">CHILLED SEASONED CHAI<span class="shop-item-price">$20</span></h4>
+                                            <p>An absolutely, seriously, refreshingly lift to any day.</p>
+                                            <br><button type="button" class="button">
+                                                <span class="buttontext">Add item +</span>
+                                                <span class="buttonicon"><ion-icon name="cart"></ion-icon></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                        <div class="single-menu">
+                                            <img id="img10" onmouseover="setNewimage9()" onmouseout="setOldimage9()" src="img/matcha.jpeg" alt="coffe" class="shop-item-image">
+                                            <div class="menu-content">
+                                                <h4 class="shop-item-title">MATCHA LATTE<span class="shop-item-price">$30</span></h4>
+                                                <p>This blend of sweetened premium matcha green tea, milk and ice—topped off with sweetened whipped cream—inspires a delicious boost and good green vibes.</p>
+                                                <br><button type="button" class="button">
+                                                    <span class="buttontext">Add item +</span>
+                                                    <span class="buttonicon"><ion-icon name="cart"></ion-icon></span>
+                                                </button>
+                                            </div>
+                                        </div>
+    </div>
+</div>
+
+<!-- footer start -->
+<footer id="footer">
+    <div class="footer-logo text-center"><img src="./images/logo.png" alt=""></div>
+    <div class="socail-links text-center">
+      <i class="fa-brands fa-twitter"></i>
+      <i class="fa-brands fa-facebook-f"></i>
+      <i class="fa-brands fa-instagram"></i>
+      <i class="fa-brands fa-youtube"></i>
+      <i class="fa-brands fa-pinterest-p"></i>
+    </div>
+
+    <div class="credits text-center">
+      <p><b>Privacy notice &nbsp;&nbsp;| &nbsp;&nbsp; Terms of Use &nbsp;&nbsp;| &nbsp;&nbsp; Do Not Share my personal Information&nbsp;&nbsp;| &nbsp;&nbsp; Cookie Preferences</b></p>
+      Dseigned By <a href="#"> <span>Tech Turtle</span></a>
+    </div>
+
+    <div class="copyright text-center">
+      &copy; Copyright <strong> <span>Coffee Shop</span></strong>. All Rights reserved
+    </div>
+
+
+  </footer>
+  <!-- footer end -->
+      <!-- custom js file link  -->
+      <script src="script.js"></script>
+</body>
+</html>

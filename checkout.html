@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Checkout Form </title>
+<link rel="stylesheet" href="style.css">
+    <!-- bootstrap links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- bootstrap links -->
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <!-- this is icons link -->
+    <style>
+    #myDIV {
+      border: 1px solid black;
+      width: 250px;
+      height: 100px;
+      overflow: scroll;
+    }
+    </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg" id="navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#" id="logo"><img src="./images/logo.png" alt=""></a>
+      
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="menuindex.html">Menu</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="contact us.html">Contact</a>
+          </li> 
+          
+        </ul>
+        <li class="icons">
+          <div class="fas fa-search" id="search-btn"></div>
+          <div class="fas fa-user" id="login-btn"></div>
+          <div class="fas fa-shopping-cart" id="cart-btn"></div>
+          </li>
+          <form action="" class="cart-form">
+              <div class="container content-section">
+                  <h2 class="section-header">CART</h2>
+                  <div class="cart-row">
+                      <span class="cart-item cart-header cart-column">ITEM</span>
+                      <span class="cart-price cart-header cart-column">PRICE</span>
+                      <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+                  </div>
+                  <div class="cart-items">
+                  </div>
+                  <div class="cart-total">
+                      <h6><b>DELIVERY CHARGES FOR EACH ITEM : $5</b></h6>
+                      <strong class="cart-total-title">Total</strong>
+                      <span class="cart-total-price">$0</span>
+                  </div>
+                  <button class="btn btn-primary btn-purchase" type="button"><a class="b1" href="checkout.html">PLACE ORDER</a></button>
+              </div>
+          </form>
+        <form action="" class="search-form">
+          <input type="search" id="search-box" placeholder="search here...">
+          <label for="search-box" class="fas fa-search"></label>
+      </form>
+      <form action="" class="login-form" onsubmit="myFunctionnn()">
+        <h3>login now</h3>
+        <input type="email" placeholder="your email" class="box" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"required>
+        <input type="password" placeholder="your password" class="box">
+        <p>Forget your password <a href="#">click here</a></p>
+        <p>Don't have an account <a href="#">create now</a></p>
+        <input type="submit" value="Login Now" id="btn">
+    </form>
+      </div>
+    </div>
+  </nav>
+  <section id="checkout">
+    <div class="c1">
+    <h1>Checkout Form</h1>
+    <br>
+<form action="/action_page.php" onsubmit="myFunction2()">
+<h2> Contact Information  </h2>
+<label for="html">Email: </label>
+<br>
+<input type="email" id="email" name="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"required>
+<br>
+<br>
+<input type = "checkbox" name = "Email me" value = "on" checked> Email me with news and offers
+<h2> Shipping Address </h2>
+<label for="html">First name:</label>
+<br>
+<input type="text" name="name" id="fname"  placeholder="First name" pattern="[a-zA-Z]+" required>
+<br>
+<br>
+<label for="html">Last name:</label>
+<br>
+<input type="text" name="name"id="lname"  placeholder="Last name" pattern="[a-zA-Z]+" required>
+<br>
+<br>
+<label for="html">City:</label>
+<br>
+<select name = "dropdown" size="1">
+    <option value = "Country" selected>Karachi</option>
+    <option value = "Country">Lahore</option>
+    <option value = "Country">Islamabad</option>
+    </select>
+    <br>
+    <br>
+    <label for="html">Phone :</label>
+    <br>
+      <input type="tel" id="phone" name="phone" placeholder="123-4578-789" pattern="[0-9]{3}-[0-9]{4}-[0-9]{3}" required> 
+<br>
+<br>
+Address: <br>
+<textarea rows = "3" cols = "50" name = "description" placeholder="Address">
+ </textarea>
+
+ <br>
+ <br>
+ <input type = "checkbox" name = "save this info" value = "on"> Save this information for next time
+  <br>
+ <input type = "checkbox" name = "Text me" value = "on"> Text me with news and offers
+
+ <br>
+ <br>
+ <br>
+ <input id="btn" type="submit" value="Checkout">
+ <br>
+ <br>
+
+    <script>
+
+function myFunction2() {
+  alert("Your Order has been Placed.");
+}
+
+</script>
+        </script>
+      
+      </div>
+      </section>
+</form>
+             <!-- footer start -->
+             <footer id="footer">
+              <div class="footer-logo text-center"><img src="./images/logo.png" alt=""></div>
+              <div class="socail-links text-center">
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-youtube"></i>
+                <i class="fa-brands fa-pinterest-p"></i>
+              </div>
+    
+              <div class="credits text-center">
+                <p><b>Privacy notice &nbsp;&nbsp;| &nbsp;&nbsp; Terms of Use &nbsp;&nbsp;| &nbsp;&nbsp; Do Not Share my personal Information&nbsp;&nbsp;| &nbsp;&nbsp; Cookie Preferences</b></p>
+                Dseigned By <a href="#"> <span>Tech Turtle</span></a>
+              </div>
+    
+              <div class="copyright text-center">
+                &copy; Copyright <strong> <span>Coffee Shop</span></strong>. All Rights reserved
+              </div>
+      
+    
+            </footer>
+            <!-- footer end -->
+            
+    <!-- custom js file link  -->
+    <script src="script.js"></script>
+
+</body>
+</html>
